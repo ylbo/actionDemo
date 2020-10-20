@@ -27,9 +27,9 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
     - name: Build and push
       run: |
-        docker build -t 1635537446/github:latest -t 1635537446/github:${{ github.sha }} .
-        docker push 1635537446/github:${{ github.sha }}
-        docker push 1635537446/github:latest
+        docker build -t 1635537446/action-demo:latest -t 1635537446/action-demo:${{ github.sha }} .
+        docker push 1635537446/action-demo:${{ github.sha }}
+        docker push 1635537446/action-demo:latest
       # 让K8s应用deployment
     - uses: azure/k8s-set-context@v1
       with:
