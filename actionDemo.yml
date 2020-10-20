@@ -38,7 +38,7 @@ spec:
     spec:
       containers:
       - name: github
-        image: 1635537446/github:latest
+        image: 1635537446/action-demo:latest
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
