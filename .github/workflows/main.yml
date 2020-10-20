@@ -6,7 +6,12 @@ name: Java CI with Maven
 on:
   push:
     branches: [ main ]
-
+  paths:
+    - 'src/**'
+    - 'Dockerfile'
+    - 'actionDemo.yml'
+    - 'pom.xml'
+    - '.github/**'
 jobs:
   build:
     name: docker build and push
