@@ -36,13 +36,13 @@ jobs:
         docker push 1635537446/action-demo:${{ github.sha }}
         docker push 1635537446/action-demo:latest
       # 让K8s应用deployment
-    - uses: azure/k8s-set-context@v1
-      with:
-        method: kubeconfig
-        kubeconfig: ${{ secrets.KUBE_CONFIG_DATA }}
-        context: default
-      id: setcontext
-    - name: deploy
-      run: |
-        sed -i 's/latest/${{ github.sha }}/g' actionDemo.yml
-        kubectl apply -f actionDemo.yml
+    #- uses: azure/k8s-set-context@v1
+    #  with:
+    #    method: kubeconfig
+    #    kubeconfig: ${{ secrets.KUBE_CONFIG_DATA }}
+    #    context: default
+    #  id: setcontext
+    #- name: deploy
+    #  run: |
+    #    sed -i 's/latest/${{ github.sha }}/g' actionDemo.yml
+    #    kubectl apply -f actionDemo.yml
